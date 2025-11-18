@@ -1,0 +1,38 @@
+/* ===================================================
+   BANNER DA PÁGINA INICIAL (HERO BANNER)
+   =================================================== */
+
+.hero-banner {
+    /* Define a altura do banner para 78% da altura da janela, com um mínimo de 400px */
+    height: 78vh; 
+    min-height: 400px;
+    
+    /* Imagem de fundo */
+    background: url('../img/fundo_serviços.jpg') no-repeat center center;
+    background-size: cover;
+    
+    /* Alinhamento e posicionamento do conteúdo */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Camada escura sobre a imagem para melhorar a legibilidade do texto */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+/* Garante que o conteúdo do banner (texto e botões) fique acima da camada escura */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
